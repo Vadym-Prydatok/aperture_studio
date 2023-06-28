@@ -1,0 +1,19 @@
+@charset 'UTF-8';
+
+@import "./_utils/variables";
+@import "./_utils/placeholders";
+
+@import "./base/common";
+@import "./base/typography";
+
+@import "./components/navbar-link";
+@import "./components/button";
+@import "./components/card";
+@import "./components/burger-menu";
+@import "./components/modal";
+@import "./components/input";
+
+@import "./layout/header";
+@import "./layout/footer";
+
+@import "./pages/main";

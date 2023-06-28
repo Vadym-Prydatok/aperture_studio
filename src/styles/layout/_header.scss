@@ -1,0 +1,124 @@
+.header-wrapper {
+  max-width: $content-width;
+  margin: auto;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 $padding_side;
+  align-items: center;
+  height: 90px;
+  @media only screen and (max-width: $breakpoints_desktop) {
+    padding: 0 $padding_destop;
+  }
+  @media only screen and (max-width: $breakpoints_tablet) {
+    padding: 0 $padding_tablet;
+  }
+  @media only screen and (max-width: $breakpoints_mobile) {
+    height: 60px;
+    padding: 0 $padding_mobile;
+  }
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: $breakpoints_mobile) {
+    transform: scale(0.7);
+  }
+}
+
+.header__navbar {
+  ul {
+    display: flex;
+    gap: 32px;
+  }
+
+  li {
+    margin-bottom: 6px;
+  }
+  @media only screen and (max-width: $breakpoints_tablet) {
+    display: none;
+  }
+}
+
+.header__burger {
+  display: none;
+  transition: 0.3s all linear;
+  position: relative;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+
+  @media only screen and (max-width: $breakpoints_tablet) {
+    display: block;
+  }
+  @media only screen and (max-width: $breakpoints_mobile) {
+    transform: scale(0.7);
+    margin-right: 20px;
+  }
+}
+
+.header_dark {
+  background-color: transparent;
+
+  .header__logo {
+    .header__title {
+      color: $color-primary;
+    }
+
+    .header__subtitle {
+      color: $color-light-xl;
+    }
+
+    &:hover {
+      .header__title,
+      .header__subtitle {
+        color: $color-primary-light;
+      }
+    }
+
+    &:active {
+      .header__title {
+        color: $color-primary;
+      }
+
+      .header__subtitle {
+        color: $color-light-xl;
+      }
+    }
+  }
+}
+
+.header_light {
+  background-color: $color-light-xl;
+
+  .header__logo {
+    .header__title {
+      color: $color-dark-l;
+    }
+
+    .header__subtitle {
+      color: $color-dark-3xl;
+    }
+
+    &:hover {
+      .header__title,
+      .header__subtitle {
+        color: $color-dark-m;
+      }
+    }
+
+    &:active {
+      .header__title {
+        color: $color-dark-l;
+      }
+
+      .header__subtitle {
+        color: $color-dark-xl;
+      }
+    }
+  }
+}
