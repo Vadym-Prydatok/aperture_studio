@@ -87,7 +87,7 @@
       row-gap: 20px;
 
       @media only screen and (max-width: $breakpoints_tablet) {
-        margin-bottom: 20px;
+        margin-bottom: 50px;
       }
     }
 
@@ -95,34 +95,7 @@
       display: flex;
       align-items: center;
       position: relative;
-      justify-content: flex-start;
-
-      &--is-active {
-        justify-content: flex-end;
-        
-        input:first-child {
-          transition: all $mainTransition ease;
-          background-color: $color-dark-l;
-        }
-      }
-
-      .button {
-        border: none;
-        position: absolute;
-        z-index: 2;
-        padding: 14px;
-        border: 1px solid $color-dark-l;
-
-        @media only screen and (max-width: $breakpoints_tablet) {
-          margin-left: 250px;
-        }
-
-        @media only screen and (max-width: $breakpoints_mobile) {
-          padding: 4px;
-          border-radius: 8px;
-          margin-left: 185px;
-        }
-      }
+      justify-content: center;
 
       @media only screen and (max-width: $breakpoints_tablet) {
         justify-content: center;
@@ -212,4 +185,89 @@
   @media only screen and (max-width: $breakpoints_mobile) {
     padding: 40px $padding_mobile;
   }
+}
+
+.switch {
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  margin: -30px 0 0 -75px;
+  background: #056353;
+  transition: all 0.2s ease;
+  border-radius: 25px;
+}
+
+.switch span {
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  top: 50%;
+  left: 50%;
+  margin: -2px 0px 0px -4px;
+  background: #fff;
+  display: block;
+  transform: rotate(-45deg);
+  transition: all 0.2s ease;
+}
+
+.switch span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 4px;
+  height: 12px;
+  margin-top: -8px;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.switch label {
+  cursor: pointer;
+  color: rgba(150, 123, 5, 0.589);
+  width: 60px;
+  line-height: 50px;
+  transition: all 0.2s ease;
+}
+
+label[for=yes] {
+  position: absolute;
+  left: 0px;
+  height: 20px;
+}
+
+label[for=no] {
+  position: absolute;
+  right: 0px;
+}
+
+#no:checked~.switch {
+  background: #272120;
+}
+
+#no:checked~.switch span {
+  background: #fff;
+  margin-left: -8px;
+}
+
+#no:checked~.switch span:after {
+  background: #fff;
+  height: 20px;
+  margin-top: -8px;
+  margin-left: 8px;
+}
+
+#yes:checked~.switch label[for=yes] {
+  color: #fff;
+}
+
+#no:checked~.switch label[for=no] {
+  color: #fff;
 }
