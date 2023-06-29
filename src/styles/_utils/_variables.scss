@@ -15,6 +15,8 @@ $color-secondary: #000000;
 $color-primary-light: #b2b2b2;
 $color-primary-modal: rgba(178, 178, 178, 0.5);
 
+$mainTransition: 0.3s;
+
 $content-width: 1440px;
 
 $breakpoints_desktop: 1150px;
@@ -26,7 +28,6 @@ $padding_destop: 80px;
 $padding_tablet: 50px;
 $padding_mobile: 30px;
 
-//Animation
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;

@@ -44,12 +44,19 @@
   margin-top: 10px;
 }
 
+#submit-button {
+  margin-top: 10px;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
 
   .contact-button {
+    display: flex;
+    flex-direction: row;
     margin: 0 auto;
+    gap: 15px;
   }
 }

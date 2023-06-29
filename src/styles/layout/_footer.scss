@@ -11,12 +11,14 @@
       @extend %footer__container;
       color: $color-light-xl;
       row-gap: 20px;
-      @media only screen and (max-width: $breakpoints_desktop) {
-      }
+
+      @media only screen and (max-width: $breakpoints_desktop) {}
+
       @media only screen and (max-width: $breakpoints_tablet) {
         padding: 0 30px;
         max-width: 100%;
       }
+
       @media only screen and (max-width: $breakpoints_mobile) {
         padding: 0;
       }
@@ -34,10 +36,18 @@
 
         .container_link {
           max-width: fit-content;
+          transition: all ease-in-out $mainTransition;
+
+          &:hover {
+            color: $color-dark-l;
+            transition: all ease-in-out $mainTransition;
+          }
         }
+
         @media only screen and (max-width: $breakpoints_desktop) {
           min-width: 180px;
         }
+
         @media only screen and (max-width: $breakpoints_tablet) {
           min-width: 160px;
         }
@@ -48,15 +58,17 @@
           min-width: 80px;
         }
       }
+
       @media only screen and (max-width: $breakpoints_tablet) {
         justify-content: space-around;
         padding: 0 30px;
       }
+
       @media only screen and (max-width: $breakpoints_mobile) {
-        //justify-content: space-between;
         padding: 0;
       }
     }
+
     @media only screen and (max-width: $breakpoints_tablet) {
       flex-direction: column;
       row-gap: 20px;
@@ -73,6 +85,7 @@
       display: flex;
       flex-direction: column;
       row-gap: 20px;
+
       @media only screen and (max-width: $breakpoints_tablet) {
         margin-bottom: 20px;
       }
@@ -82,7 +95,16 @@
       display: flex;
       align-items: center;
       position: relative;
-      justify-content: flex-end;
+      justify-content: flex-start;
+
+      &--is-active {
+        justify-content: flex-end;
+        
+        input:first-child {
+          transition: all $mainTransition ease;
+          background-color: $color-dark-l;
+        }
+      }
 
       .button {
         border: none;
@@ -90,19 +112,23 @@
         z-index: 2;
         padding: 14px;
         border: 1px solid $color-dark-l;
+
         @media only screen and (max-width: $breakpoints_tablet) {
           margin-left: 250px;
         }
+
         @media only screen and (max-width: $breakpoints_mobile) {
           padding: 4px;
           border-radius: 8px;
           margin-left: 185px;
         }
       }
+
       @media only screen and (max-width: $breakpoints_tablet) {
         justify-content: center;
       }
     }
+
     @media only screen and (max-width: $breakpoints_tablet) {
       display: block;
       text-align: center;
@@ -120,6 +146,7 @@
 
     .container__license {
       @extend %font-paragraph-l;
+
       @media only screen and (max-width: $breakpoints_tablet) {
         margin-right: 15px;
       }
@@ -132,16 +159,56 @@
       .content__icon {
         text-align: center;
         width: 24px;
+
+        .content__link {
+          display: block;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 24px;
+          width: 24px;
+          transition: all ease-in-out $mainTransition;
+
+          &:hover {
+            transition: all ease-in-out $mainTransition;
+          }
+        }
+
+        .twiter {
+          background-image: url(../assets/icons/twitter.svg);
+
+          &:hover {
+            background-image: url(../assets/icons/twitter-hover.svg);
+          }
+        }
+
+        .instagram {
+          background-image: url(../assets/icons/instagram.svg);
+
+          &:hover {
+            background-image: url(../assets/icons/instagram-hover.svg);
+          }
+        }
+
+        .facebook {
+          background-image: url(../assets/icons/facebook.svg);
+
+          &:hover {
+            background-image: url(../assets/icons/facebook-hover.svg);
+          }
+        }
       }
     }
   }
 
+
   @media only screen and (max-width: $breakpoints_desktop) {
     padding: 80px $padding_destop;
   }
+
   @media only screen and (max-width: $breakpoints_tablet) {
     padding: 70px $padding_tablet;
   }
+
   @media only screen and (max-width: $breakpoints_mobile) {
     padding: 40px $padding_mobile;
   }
