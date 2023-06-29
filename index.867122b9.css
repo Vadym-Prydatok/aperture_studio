@@ -77,27 +77,6 @@
   animation-duration: 10s;
 }
 
-@font-face {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 400;
-  src: url("Poppins-Regular.2cfca913.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 700;
-  src: url("Poppins-Regular.2cfca913.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: Poppins;
-  font-style: italic;
-  font-weight: 400;
-  src: url("Poppins-Regular.2cfca913.ttf") format("truetype");
-}
-
 *, :before, :after {
   box-sizing: border-box;
 }
@@ -234,6 +213,27 @@ h6 {
   h6 {
     font-size: 12px;
   }
+}
+
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  src: url("Poppins-Regular.2cfca913.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 700;
+  src: url("Poppins-Regular.2cfca913.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 400;
+  src: url("Poppins-Regular.2cfca913.ttf") format("truetype");
 }
 
 .navbar-link {
@@ -518,7 +518,7 @@ h6 {
   }
 }
 
-#close-button {
+#close-button, #submit-button {
   margin-top: 10px;
 }
 
@@ -529,7 +529,10 @@ h6 {
 }
 
 .contact-form .contact-button {
+  flex-direction: row;
+  gap: 15px;
   margin: 0 auto;
+  display: flex;
 }
 
 .input {
@@ -740,6 +743,12 @@ h6 {
 .footer .container__first .container_lists .container__list .container_link {
   max-width: -moz-fit-content;
   max-width: fit-content;
+  transition: all .3s ease-in-out;
+}
+
+.footer .container__first .container_lists .container__list .container_link:hover {
+  color: #545454;
+  transition: all .3s ease-in-out;
 }
 
 @media only screen and (width <= 1150px) {
@@ -796,10 +805,21 @@ h6 {
 }
 
 .footer .container__subscribe .subscribe__form {
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
+  transition: all .3s linear;
   display: flex;
   position: relative;
+}
+
+.footer .container__subscribe .subscribe__form--is-active {
+  justify-content: flex-end;
+  transition: all .3s linear;
+}
+
+.footer .container__subscribe .subscribe__form--is-active input:first-child {
+  background-color: #545454;
+  transition: all .3s linear;
 }
 
 .footer .container__subscribe .subscribe__form .button {
@@ -858,6 +878,43 @@ h6 {
 .footer .container__last .content__icons .content__icon {
   text-align: center;
   width: 24px;
+}
+
+.footer .container__last .content__icons .content__icon .content__link {
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  transition: all .3s ease-in-out;
+  display: block;
+}
+
+.footer .container__last .content__icons .content__icon .content__link:hover {
+  transition: all .3s ease-in-out;
+}
+
+.footer .container__last .content__icons .content__icon .twiter {
+  background-image: url("twitter.9674fcbd.svg");
+}
+
+.footer .container__last .content__icons .content__icon .twiter:hover {
+  background-image: url("twitter-hover.2002ab0c.svg");
+}
+
+.footer .container__last .content__icons .content__icon .instagram {
+  background-image: url("instagram.a7b44d95.svg");
+}
+
+.footer .container__last .content__icons .content__icon .instagram:hover {
+  background-image: url("instagram-hover.cde994c8.svg");
+}
+
+.footer .container__last .content__icons .content__icon .facebook {
+  background-image: url("facebook.8875be97.svg");
+}
+
+.footer .container__last .content__icons .content__icon .facebook:hover {
+  background-image: url("facebook-hover.c65262e0.svg");
 }
 
 @media only screen and (width <= 1150px) {

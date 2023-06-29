@@ -4,7 +4,6 @@ gsap.from(".animate__fadeInUp-to", {
         trigger: ".animate__fadeInUp-to",
         start: "bottom center",
         end: "top 0%",
-        //markers: true,
         scrub: true
     },
     yPercent: -50,
@@ -26,7 +25,6 @@ fadeInLeft.forEach((el)=>{
             trigger: el,
             start: "5px 100%",
             end: "top 20%",
-            //markers: true,
             scrub: true
         },
         xPercent: -100,
@@ -39,7 +37,6 @@ fadeInRight.forEach((el)=>{
             trigger: el,
             start: "5px 100%",
             end: "top 20%",
-            //markers: true,
             scrub: true
         },
         xPercent: 100,
