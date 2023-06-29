@@ -800,47 +800,15 @@ h6 {
 
 @media only screen and (width <= 880px) {
   .footer .container__subscribe .subscribe__text {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
 }
 
 .footer .container__subscribe .subscribe__form {
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  transition: all .3s linear;
   display: flex;
   position: relative;
-}
-
-.footer .container__subscribe .subscribe__form--is-active {
-  justify-content: flex-end;
-  transition: all .3s linear;
-}
-
-.footer .container__subscribe .subscribe__form--is-active input:first-child {
-  background-color: #545454;
-  transition: all .3s linear;
-}
-
-.footer .container__subscribe .subscribe__form .button {
-  z-index: 2;
-  border: 1px solid #545454;
-  padding: 14px;
-  position: absolute;
-}
-
-@media only screen and (width <= 880px) {
-  .footer .container__subscribe .subscribe__form .button {
-    margin-left: 250px;
-  }
-}
-
-@media only screen and (width <= 485px) {
-  .footer .container__subscribe .subscribe__form .button {
-    border-radius: 8px;
-    margin-left: 185px;
-    padding: 4px;
-  }
 }
 
 @media only screen and (width <= 880px) {
@@ -933,6 +901,87 @@ h6 {
   .footer {
     padding: 40px 30px;
   }
+}
+
+.switch {
+  text-align: center;
+  background: #056353;
+  border-radius: 25px;
+  width: 150px;
+  height: 50px;
+  margin: -30px 0 0 -75px;
+  font-size: 20px;
+  transition: all .2s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.switch span {
+  background: #fff;
+  width: 20px;
+  height: 4px;
+  margin: -2px 0 0 -4px;
+  transition: all .2s;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotate(-45deg);
+}
+
+.switch span:after {
+  content: "";
+  background: #fff;
+  width: 4px;
+  height: 12px;
+  margin-top: -8px;
+  transition: all .2s;
+  display: block;
+  position: absolute;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.switch label {
+  cursor: pointer;
+  color: #967b0596;
+  width: 60px;
+  line-height: 50px;
+  transition: all .2s;
+}
+
+label[for="yes"] {
+  height: 20px;
+  position: absolute;
+  left: 0;
+}
+
+label[for="no"] {
+  position: absolute;
+  right: 0;
+}
+
+#no:checked ~ .switch {
+  background: #272120;
+}
+
+#no:checked ~ .switch span {
+  background: #fff;
+  margin-left: -8px;
+}
+
+#no:checked ~ .switch span:after {
+  background: #fff;
+  height: 20px;
+  margin-top: -8px;
+  margin-left: 8px;
+}
+
+#yes:checked ~ .switch label[for="yes"], #no:checked ~ .switch label[for="no"] {
+  color: #fff;
 }
 
 .header {

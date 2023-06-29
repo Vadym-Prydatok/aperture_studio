@@ -9,7 +9,7 @@ const modalWindow = document.querySelector("#modal-window");
 const closeButton = document.querySelector("#close-button");
 const submitButton = document.querySelector("#submit-button");
 const submitForms = document.querySelectorAll("#submit");
-const subscribeButton = document.querySelector("#subscribe-button");
+const subscribeButton = document.querySelector("#yes");
 submitForms.forEach(function(form) {
     form.addEventListener("submit", (e)=>{
         e.preventDefault();
@@ -28,7 +28,8 @@ submitButton.addEventListener("click", ()=>{
     modalWindow.style.display = "none";
 });
 subscribeButton.addEventListener("click", ()=>{
-    subscribeButton.parentElement.classList.toggle("subscribe__form--is-active");
+    modalWindow.style.display = "block";
+    modalWindow.firstElementChild.firstElementChild.textContent = "Enter your email to receive news about us!";
 });
 
 //# sourceMappingURL=index.6a31943b.js.map
