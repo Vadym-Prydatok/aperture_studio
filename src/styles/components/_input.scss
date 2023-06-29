@@ -3,7 +3,7 @@
   padding: 15px;
   padding-right: 130px;
   font-size: 15px;
-  background-color: $color-light-l;
+  background-color: $color-light-xl;
   border-radius: 12px;
   z-index: 1;
   outline: none;
@@ -13,6 +13,7 @@
   &:hover,
   &:focus {
     border: 1px solid $color-dark-m;
+    background-color: $color-light-xl;
   }
   @media only screen and (max-width: $breakpoints_desktop) {
     width: 400px;
@@ -27,4 +28,10 @@
     padding: 5px 85px 5px 10px;
     border-radius: 8px;
   }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
 }

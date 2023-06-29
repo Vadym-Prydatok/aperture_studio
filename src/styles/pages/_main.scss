@@ -68,6 +68,19 @@
           column-gap: 6px;
           align-items: center;
 
+          .content__link {
+            display: flex;
+            gap: 4px;
+            font-size: 14px;
+            line-height: 14px;
+            transition: all ease $mainTransition;
+            justify-content: center;
+
+            &:hover {
+              color: $color-dark-l;
+            }
+          }
+
           .content__param_title {
             @extend %font-param-title;
           }
@@ -197,6 +210,19 @@
           column-gap: 6px;
           align-items: center;
 
+          .content__link {
+            display: flex;
+            gap: 4px;
+            font-size: 14px;
+            line-height: 14px;
+            transition: all ease $mainTransition;
+            justify-content: center;
+
+            &:hover {
+              color: $color-dark-l;
+            }
+          }
+
           .content__param_title {
             @extend %font-param-title;
           }
@@ -284,6 +310,19 @@
           column-gap: 6px;
           align-items: center;
 
+          .content__link {
+            display: flex;
+            gap: 4px;
+            font-size: 12px;
+            line-height: 12px;
+            transition: all ease $mainTransition;
+            justify-content: center;
+
+            &:hover {
+              color: $color-dark-l;
+            }
+          }
+
           .content__param_title {
             @extend %font-param-title;
           }
@@ -353,6 +392,19 @@
           display: flex;
           column-gap: 6px;
           align-items: center;
+
+          .content__link {
+            display: flex;
+            gap: 4px;
+            font-size: 14px;
+            line-height: 14px;
+            transition: all ease $mainTransition;
+            justify-content: center;
+
+            &:hover {
+              color: $color-dark-l;
+            }
+          }
 
           .content__param_title {
             @extend %font-param-title;
@@ -424,6 +476,15 @@
           @media only screen and (max-width: $breakpoints_tablet) {
             padding: 0 27px;
           }
+
+            .content__image {
+              transition: all ease-in-out $mainTransition;
+              
+              &:hover {
+                transform: scale(1.1);
+                transition: all ease-in-out $mainTransition;
+              }
+            }
         }
         @media only screen and (max-width: $breakpoints_mobile) {
           justify-content: center;
@@ -498,6 +559,19 @@
           display: flex;
           column-gap: 6px;
           align-items: center;
+
+          .content__link {
+            display: flex;
+            gap: 4px;
+            font-size: 12px;
+            line-height: 12px;
+            transition: all ease $mainTransition;
+            justify-content: center;
+
+            &:hover {
+              color: $color-dark-l;
+            }
+          }
 
           .content__param_title {
             @extend %font-param-title;

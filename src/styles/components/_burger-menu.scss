@@ -9,6 +9,7 @@
   border: 1px solid transparent;
   transition: all 0.3s;
   z-index: 999;
+
   @media only screen and (max-width: $breakpoints_tablet) and (hover: hover) {
     &.burger_wrapper--transparent {
       background-color: transparent;
@@ -32,7 +33,6 @@
   top: 90px;
   right: -100%;
   width: 250px;
-  //height: 250px;
   background-color: $color-primary;
   z-index: 9999;
   transition: right 0.5s ease-in-out;
@@ -67,7 +67,12 @@
   height: 4px;
   background-color: $color-dark-s;
   margin: 8px;
+  margin-left: 16px;
   transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    background-color: red;
+  }
 
   &::before,
   &::after {
@@ -76,8 +81,9 @@
     width: 30px;
     height: 4px;
     background-color: $color-dark-s;
-    margin: 8px;
+    margin: 8px 0;
     transition: transform 0.3s ease-in-out;
+
   }
 
   &::before {
@@ -91,10 +97,11 @@
 
 #burger-menu-button.open + .burger-menu-icon {
   transform: translateX(8px) rotate(45deg);
+  margin-left: 8px;
 }
 
 #burger-menu-button.open + .burger-menu-icon::before {
-  transform: translate(-8px) rotate(90deg);
+  transform: translate(0) rotate(90deg);
 }
 
 #burger-menu-button.open + .burger-menu-icon::after {
