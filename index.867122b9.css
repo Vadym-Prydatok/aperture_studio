@@ -425,9 +425,13 @@ h6 {
   background-color: silver;
   width: 30px;
   height: 4px;
-  margin: 8px;
+  margin: 8px 8px 8px 16px;
   transition: transform .3s ease-in-out;
   display: block;
+}
+
+.burger-menu-icon:hover {
+  background-color: red;
 }
 
 .burger-menu-icon:before, .burger-menu-icon:after {
@@ -435,7 +439,7 @@ h6 {
   background-color: silver;
   width: 30px;
   height: 4px;
-  margin: 8px;
+  margin: 8px 0;
   transition: transform .3s ease-in-out;
   display: block;
 }
@@ -449,11 +453,12 @@ h6 {
 }
 
 #burger-menu-button.open + .burger-menu-icon {
+  margin-left: 8px;
   transform: translateX(8px)rotate(45deg);
 }
 
 #burger-menu-button.open + .burger-menu-icon:before {
-  transform: translate(-8px)rotate(90deg);
+  transform: translate(0)rotate(90deg);
 }
 
 #burger-menu-button.open + .burger-menu-icon:after {
@@ -537,7 +542,7 @@ h6 {
 
 .input {
   z-index: 1;
-  background-color: #f9fafb;
+  background-color: #fff;
   border: 1px solid #0000;
   border-radius: 12px;
   outline: none;
@@ -547,6 +552,7 @@ h6 {
 }
 
 .input:active, .input:hover, .input:focus {
+  background-color: #fff;
   border: 1px solid #b2b2b2;
 }
 
@@ -570,6 +576,18 @@ h6 {
     width: 260px;
     padding: 5px 85px 5px 10px;
   }
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 1000px #fff;
+}
+
+input:-webkit-autofill:hover {
+  -webkit-box-shadow: inset 0 0 0 1000px #fff;
+}
+
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: inset 0 0 0 1000px #fff;
 }
 
 .header-wrapper {
@@ -1045,6 +1063,19 @@ label[for="no"] {
   display: flex;
 }
 
+.start .start__container .content .content__params .content__param .content__link {
+  justify-content: center;
+  gap: 4px;
+  font-size: 14px;
+  line-height: 14px;
+  transition: all .3s;
+  display: flex;
+}
+
+.start .start__container .content .content__params .content__param .content__link:hover {
+  color: #545454;
+}
+
 @media only screen and (width <= 880px) {
   .start .start__container .content .content__params {
     margin-right: 20px;
@@ -1185,6 +1216,19 @@ label[for="no"] {
   display: flex;
 }
 
+.sunset .sunset__container .content .content__params .content__param .content__link {
+  justify-content: center;
+  gap: 4px;
+  font-size: 14px;
+  line-height: 14px;
+  transition: all .3s;
+  display: flex;
+}
+
+.sunset .sunset__container .content .content__params .content__param .content__link:hover {
+  color: #545454;
+}
+
 @media only screen and (width <= 485px) {
   .sunset .sunset__container .content {
     padding: 440px 30px 40px;
@@ -1271,6 +1315,19 @@ label[for="no"] {
   display: flex;
 }
 
+.gear .gear__container .content .content__params .content__param .content__link {
+  justify-content: center;
+  gap: 4px;
+  font-size: 12px;
+  line-height: 12px;
+  transition: all .3s;
+  display: flex;
+}
+
+.gear .gear__container .content .content__params .content__param .content__link:hover {
+  color: #545454;
+}
+
 @media only screen and (width <= 880px) {
   .gear .gear__container .content {
     display: block;
@@ -1334,6 +1391,19 @@ label[for="no"] {
   display: flex;
 }
 
+.monstera .monstera__container .content .content__params .content__param .content__link {
+  justify-content: center;
+  gap: 4px;
+  font-size: 14px;
+  line-height: 14px;
+  transition: all .3s;
+  display: flex;
+}
+
+.monstera .monstera__container .content .content__params .content__param .content__link:hover {
+  color: #545454;
+}
+
 @media only screen and (width <= 485px) {
   .monstera .monstera__container .content {
     padding: 440px 30px 40px;
@@ -1393,6 +1463,15 @@ label[for="no"] {
   .clients .clients__container .content .content__icons .content__icon {
     padding: 0 27px;
   }
+}
+
+.clients .clients__container .content .content__icons .content__icon .content__image {
+  transition: all .3s ease-in-out;
+}
+
+.clients .clients__container .content .content__icons .content__icon .content__image:hover {
+  transition: all .3s ease-in-out;
+  transform: scale(1.1);
 }
 
 @media only screen and (width <= 485px) {
@@ -1474,6 +1553,19 @@ label[for="no"] {
   align-items: center;
   column-gap: 6px;
   display: flex;
+}
+
+.starfall .starfall__container .content .content__params .content__param .content__link {
+  justify-content: center;
+  gap: 4px;
+  font-size: 12px;
+  line-height: 12px;
+  transition: all .3s;
+  display: flex;
+}
+
+.starfall .starfall__container .content .content__params .content__param .content__link:hover {
+  color: #545454;
 }
 
 @media only screen and (width <= 1150px) {

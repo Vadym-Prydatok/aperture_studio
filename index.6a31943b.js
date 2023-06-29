@@ -19,6 +19,7 @@ submitForms.forEach(function(form) {
 modalButtons.forEach(function(button) {
     button.addEventListener("click", ()=>{
         modalWindow.style.display = "block";
+        modalWindow.firstElementChild.firstElementChild.textContent = "You can fill out the form below and one of our team members will getback to you as soon as possible.";
     });
 });
 closeButton.addEventListener("click", ()=>{
